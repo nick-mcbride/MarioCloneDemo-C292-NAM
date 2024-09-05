@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        //Vector3position = transform.position;
+        //Vector3 size = GetComponent<BoxCollider2D>().size;
     }
 
     // Update is called once per frame
