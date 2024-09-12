@@ -9,6 +9,7 @@ public class UIManagement : MonoBehaviour
 {
     public static UIManagement Instance;
     [SerializeField] private TextMeshProUGUI pointText;
+    [SerializeField] private TextMeshProUGUI hitPointsText;
 
     private int currentPoints = 0;
 
@@ -28,5 +29,10 @@ public class UIManagement : MonoBehaviour
     {
         currentPoints += points;
         pointText.text = "x" + currentPoints;
+    }
+
+    public void UpdateHitPoints(int hitPoints)
+    {
+        hitPointsText.text = "HP: " + hitPoints;
     }
 }

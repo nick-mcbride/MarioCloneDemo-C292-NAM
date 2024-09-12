@@ -29,10 +29,10 @@ public class Coin : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter called with: " + other.gameObject.name);
-        if (other.CompareTag("Player"))
+        Debug.Log("OnTriggerEnter called with: " + collision.gameObject.name);
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("Player collided with coin");
             UIManagement.Instance.IncreaseScore(pointValue);
